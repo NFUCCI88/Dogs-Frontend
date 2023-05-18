@@ -1,0 +1,69 @@
+.colorincolorado{
+    color: #001213;
+    color: #7a9196;
+    color: #2b5f68;
+    color: #499ca0;
+    color: #98f0f3
+}
+
+
+
+.cardList {
+    display              : grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap             : 3em;
+    
+    
+}
+
+.card,
+.cardBody,
+.card-footer {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center; 
+    max-width: 275px;
+}
+
+.card {
+    border-radius: 18px;
+    background   : #fff;
+    box-shadow   : 4px 4px 25px rgba(0, 0, 0, 0.4);
+    overflow     : hidden;
+    text-decoration: none;
+    transition   : transform 0.4s;
+}
+
+.cardImage {
+    display  : block;
+    position : relative;
+    height   : 15em;
+    width: 100%;
+}
+
+.cardImage img {
+    height     : 15em;
+    width          : 100%;
+    background-size: cover;
+}
+
+.card:hover {
+    transform : scale(1.05);
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.2);
+}
+
+.cardBody .date {
+    font-weight: bolder;
+}
+
+.cardBody h2 {
+    font-size: 1.8em;
+    margin   : 2px auto 12px;
+}
+
+.cardBody p {
+    color      : gray;
+    font-size  : 1.1em;
+    line-height: 22px;
+    text-align : center;
+}

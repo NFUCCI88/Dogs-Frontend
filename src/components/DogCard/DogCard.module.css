@@ -1,0 +1,106 @@
+.colorincolorado{
+    color: #001213;
+    color: #7a9196;
+    color: #2b5f68;
+    color: #499ca0;
+    color: #98f0f3;
+}
+
+.background{
+    min-height: 48.7vw;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/002/719/318/non_2x/dog-paw-prints-and-bones-seamless-pattern-vector.jpg");
+}
+.container {
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+  }
+.tittle{
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.card {
+    margin: auto;
+    max-width: 65vw;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid #dc2f55;
+    overflow: hidden;
+  }
+  .content {
+    display: flex;
+  }
+  @media (max-width: 1024px){
+    .content{
+    flex-direction: column;
+    }
+    .card {
+     max-width: 95vw;
+    }
+  }
+  .leftSide, .rightSide {
+    width: 100%;
+  }
+  .rightSide img{
+    width: 100%;
+    height: 100%;
+    border-style: none;
+  }
+  .leftSide {
+    background: #2b5f68;
+    color: white;
+    padding: 48px
+  }
+  .btn {
+    display: inline-block;
+    background: white;
+    margin-right: 4px;
+    padding: 14px;
+    border-radius: 5px;
+    margin-top: 18px;
+  }
+  .btn{
+     text-decoration: none;
+  }
+  .btn:first-of-type {
+     background: #5252b4;
+     color: white;
+  }
+  .btn:hover{
+     opacity: 0.8;
+  }
+  .button7 {
+    background-color: #7a9196;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.15385;
+    margin-top: 1.5%;
+    outline: none;
+    padding: 5px .8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+  }
+  
+  .button7:hover{
+    background-color: #98f0f3
+  }

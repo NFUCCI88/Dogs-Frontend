@@ -1,0 +1,63 @@
+.colorincolorado{
+    color: #001213;
+    color: #7a9196;
+    color: #2b5f68;
+    color: #499ca0;
+    color: #98f0f3
+  }
+  
+  
+  .margin{
+      margin: 2em
+  }
+  
+  .pagination {
+      display: inline-block;
+      margin: auto
+  }
+  
+  .pagination {
+      border: 1px solid #ddd;
+  }
+  
+  .currentPage{
+    border: 1px solid #ddd;
+    display: inline-block;
+    margin: auto;
+    color: black;
+    background-color: #2b5f68;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .pagination {
+      color: black;
+      background-color: #499ca0;
+      padding: 8px 16px;
+      text-decoration: none;
+  }
+  
+  .pagination:hover {
+      background-color: #7a9196;
+      cursor       : pointer;
+  }
+  @media (min-width: 30px) {
+      .pagination {
+        font-size: 6pt;
+      }
+    }
+    @media (min-width: 500px) {
+      .pagination {
+        font-size: 9pt;
+      }
+    }
+    @media (min-width: 700px) {
+      .pagination {
+        font-size: 11pt;
+      }
+    }
+    @media (min-width: 900px) {
+      .pagination {
+        font-size: 14pt;
+      }
+    }
