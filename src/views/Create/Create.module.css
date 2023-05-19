@@ -1,0 +1,193 @@
+.colorincolorado{
+    color: #001213;
+    color: #7a9196;
+    color: #2b5f68;
+    color: #499ca0;
+    color: #98f0f3;
+}
+
+.container {
+    align-items: center;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/002/719/318/non_2x/dog-paw-prints-and-bones-seamless-pattern-vector.jpg");
+    min-height: 70vw;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form {
+    background-color: #2b5f68;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 50em;
+    padding: 20px;
+    width: 400px;
+  }
+  
+  .tittle {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  
+  .subtitle {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .inputContainer {
+    height: 50px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .ic1 {
+    margin-top: 40px;
+  }
+  
+  .ic2 {
+    margin-top: 30px;
+  }
+  
+  .input {
+    background-color: #499ca0;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+  }
+  
+  .cut {
+    background-color: #15172b;
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 76px;
+  }
+  
+  .cut-short {
+    width: 50px;
+  }
+  
+  .input:focus ~ .cut,
+  .input:not(:placeholder-shown) ~ .cut {
+    transform: translateY(8px);
+  }
+  
+  .placeholder {
+    color: #65657b;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+  }
+  
+  .input:focus ~ .placeholder,
+  .input:not(:placeholder-shown) ~ .placeholder {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+  }
+  
+  .input:not(:placeholder-shown) ~ .placeholder {
+    color: #808097;
+  }
+  
+  .input:focus ~ .placeholder {
+    color: #dc2f55;
+  }
+  
+  .submit {
+    background-color: #7a9196;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 15%;
+    outline: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .submit:active,
+  .submit:hover {
+    background-color: #98f0f3;
+  }
+
+  .button7 {
+    background-color: #7a9196;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.15385;
+    margin-top: 1.5%;
+    outline: none;
+    padding: 5px .8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+  }
+  
+  .button7:hover{
+    background-color: #98f0f3
+  }
+  .button7:focus {
+    background-color: #98f0f3;
+  }
+  
+  .button7:focus {
+    box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+  }
+  
+  .button7:active {
+    background-color: #98f0f3;
+    box-shadow: none;
+  }
+  .error{
+    font-size: 12px;
+    color: #dc2f55;
+  }
+  .notInput{
+        cursor: not-allowed;
+        pointer-events:none;
+        background-color: #dc2f55;
+        border-radius: 12px;
+        border: 0;
+        box-sizing: border-box;
+        color: #eee;
+        font-size: 18px;
+        height: 100%;
+        outline: 0;
+        padding: 4px 20px 0;
+        width: 100%;
+  }

@@ -13,10 +13,10 @@ const DogCard = (props) =>{
                             <h1 className= {styles.tittle}>Dog Details</h1>
                             <div className="detail">
                                 <h3>{name}</h3>
-                                <h5>Height: {height}</h5>
-                                <h5>Weight: {weight}</h5>
-                                <h5>Life Span: {lifeSpan}</h5>
-                                <h6>Temperaments: {temperament}</h6>
+                                <h5>Height : {height} kg </h5>
+                                <h5>Weight : {weight} cm </h5>
+                                <h5>Life Span : {lifeSpan}</h5>
+                                <h6>Temperaments : {temperament}</h6>
                                 <Link className={styles.button7} to ="/home">HOME</Link>
                             </div>
                         </div>

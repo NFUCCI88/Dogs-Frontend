@@ -4,7 +4,6 @@ import Home from "./views/Home/Home";
 import Create from "./views/Create/Create";
 import Update from "./views/Update/Update";
 import Detail from "./views/Detail/Detail";
-import NotFound from "./views/NotFound/NotFound";
 import NavBar from "./components/NavBar/NavBar";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 //Hacer un index en views para importar todo junto
@@ -25,7 +24,7 @@ function App() {
       <Route path = "/create">
         <Create></Create>
       </Route>
-      <Route path = "/detail">
+      <Route path = "/detail/:id">
         <Detail></Detail>
       </Route>
       <Route path = "/update/:id">

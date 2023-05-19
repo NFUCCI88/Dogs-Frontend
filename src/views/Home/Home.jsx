@@ -69,6 +69,7 @@ const Home = () =>{
 
     const [filterName, setFilterName] = useState("");
     const handleSortName = (event)=>{
+      event.preventDefault();
         dispatch(filterByName(event.target.value));
         setFilterName(event.target.value);
         setCurrentPage(1);
@@ -86,7 +87,9 @@ const Home = () =>{
                 <div>
                   <div>
                     <h1>Dogs App</h1>
+                 
                     <Link className={styles.button7} to="/create">Create dog</Link>
+                    
                     <span> Filter by temperament </span>
                     <select className={styles.input}
                       value={temperament}
@@ -98,7 +101,7 @@ const Home = () =>{
                           {temp.name}
                         </option>
                       ))}
-                    </select>
+                    </select> 
 
                     <span> Sort by weight </span>
                     <select className={styles.input} value={filterWeight} onChange={(event) => handleSortWeight(event)}>

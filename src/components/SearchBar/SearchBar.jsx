@@ -9,6 +9,7 @@ export const SearchBar = ({setCurrentPage})=>{
   const allDogs = useSelector((state)=>state.dogs);
 
   const handleOnChange = (event)=>{
+    event.preventDefault();
     setName(event.target.value);
     setCurrentPage(1);
   }

@@ -24,11 +24,10 @@ export const Pagination = ({
         {pageNumbers.map((number) => (
           <div className={currentPage === number? style.currentPage : style.pagination}
             key={number}
-            onClick={() => pagination(number)}
-          >
+            onClick={() => pagination(number)}>
             {number}
           </div>
-        ))}
+          ))}
         &nbsp;
         <div className={style.pagination} onClick={paginationNext}>
           <a>{`>`}</a>

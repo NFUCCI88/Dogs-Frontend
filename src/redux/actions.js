@@ -9,6 +9,7 @@ export const FILTER_BY_NAME = "FILTER_BY_NAME";
 export const FILTER_BY_WEIGHT = "FILTER_BY_WEIGHT";
 export const UPDATE_DOG = "UPDATE_DOG";
 export const DELETE_DOG = "DELETE_DOG";
+export const CLEAN_STATE = "CLEAN_STATE";
 
 
 export const getDogs = () => async (dispatch) => {
@@ -120,4 +121,10 @@ export const getDogs = () => async (dispatch) => {
         } catch (error) {
             return { error: true, message: error.response.data.message };
         }
+    };
+
+    export const cleanState = () => (dispatch) => {
+        dispatch({
+            type: CLEAN_STATE,
+        });
     };

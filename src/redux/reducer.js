@@ -7,7 +7,8 @@ import { GET_DOGS,
     FILTER_BY_NAME, 
     FILTER_BY_WEIGHT, 
     UPDATE_DOG,
-    DELETE_DOG} from "./actions";
+    DELETE_DOG,
+    CLEAN_STATE} from "./actions";
 
 
 
@@ -121,6 +122,11 @@ export default function reducer(state = initialState, action) {
             case DELETE_DOG:
                 return {
                     ...state,
+                };
+            case CLEAN_STATE:
+                return {
+                    ...state,
+                    detail:[],
                 };
                 default:
                     return state;
