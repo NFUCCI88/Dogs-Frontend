@@ -4,13 +4,14 @@ import {Link, useHistory} from "react-router-dom";
 import {getTemperaments, createDog} from "../../redux/actions";
 import styles from "./Create.module.css";
 
+
 const validate = (input) => {
     let errors = {};
     let twoSpaceExpression = /\s{2,}/g;
     let expression = /^[a-zA-Z ]+$/gm;
     let imgExpression = /(https:\/\/)([^\s(["<,>/]*)(\/)[^\s[",><]*(.png|.jpg)(\?[^\s[",><]*)?/g;
 
-    if(!input.name){
+    if(!input.name.trim()){
         errors.name = "Name is required";
     } else if (input.name.length === 1) {
         errors.name = "Name can not have less than 2 characters"
@@ -64,6 +65,7 @@ const validate = (input) => {
     }
     return errors;
 };
+
 
 
 
@@ -121,11 +123,12 @@ const validate = (input) => {
     };
 
     const handleSubmit = (event) => {
-        if(input.name && !parseInt(input.name) && 
+        if(input.name && 
+        !parseInt(input.name) &&
         input.life_span && 
         input.weightMin && input.weightMax && 
         input.heightMin && input.heightMax &&
-        input.img &
+        input.img &&
         input.temperament && input.temperament.length > 0) 
         {
           event.preventDefault();
@@ -158,6 +161,8 @@ const validate = (input) => {
             event.preventDefault();
         }
     };
+
+    console.log(typeof(input.weightMin))
 
     return(
         <div className={styles.background}>

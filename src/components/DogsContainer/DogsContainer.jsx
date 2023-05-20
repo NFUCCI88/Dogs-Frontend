@@ -6,6 +6,7 @@ import styles from "./DogsContainer.module.css";
 const DogsContainer = (props) =>{
     const {id, name, temperament, weight, img} = props
 
+    console.log(typeof(weight))
     return(
         <div className={styles.card} style={{ textAlign: "center"}} key = {id}>
             <Link to={`/detail/${id}`} style={{textDecoration: "none", color: "#001213"}}>

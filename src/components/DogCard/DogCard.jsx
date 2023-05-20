@@ -4,6 +4,11 @@ import styles from "./DogCard.module.css";
 
 const DogCard = (props) =>{
     const {img, name, height, weight, lifeSpan, temperament} = props;
+   
+ 
+
+console.log(props)
+
     return(
         <div className={styles.background}>
             <div className={styles.container}>
