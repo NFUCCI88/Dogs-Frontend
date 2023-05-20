@@ -113,7 +113,7 @@ const Home = () =>{
                     <span> Sort by name </span>
                     <select className={styles.input} value={filterName} onChange={(event) => handleSortName(event)}>
                       <option value="az"> A - Z </option>
-                      <option value="za"> Z - A</option>
+                      <option value="za"> Z - A </option>
                     </select>
                     <SearchBar setCurrentPage={setCurrentPage} />
                   </div>
@@ -130,7 +130,8 @@ const Home = () =>{
                   id={dog.id}
                   name={dog.name}
                   temperament={dog.temperament}
-                  weight={dog.weight}
+                  weightMin={dog.weightMin}
+                  weightMax={dog.weightMax}
                   img={dog.img}
                 />
               ))

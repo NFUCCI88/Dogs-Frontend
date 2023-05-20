@@ -30,9 +30,11 @@ const Detail = () =>{
         name ={dog[0].name}
         img={dog[0].img}
         temperament={dog[0].temperament}
-        weight={dog[0].weight}
-        height={dog[0].height}
-        lifeSpan={dog[0].lifeSpan}>
+        weightMin={dog[0].weightMin}
+        weightMax={dog[0].weightMax}
+        heightMin={dog[0].heightMin}
+        heigthMax={dog[0].heigthMax}
+        life_span={dog[0].life_span}>
 
         </DogCard>)}
         
