@@ -49,7 +49,7 @@ const Home = () =>{
     const handleClick = (event) => {
         event.preventDefault();
         dispatch(getDogs());
-        setFilterName("az");
+        setFilterName("normal");
         setFilterWeight("normal");
         setTemperament("all");
         setCurrentPage(1);
@@ -68,21 +68,24 @@ const Home = () =>{
     };
 
     const [filterName, setFilterName] = useState("");
+
     const handleSortName = (event)=>{
-      event.preventDefault();
+      if(event.target.value === "normal") {
+            dispatch(getDogs());
+        }
         dispatch(filterByName(event.target.value));
         setFilterName(event.target.value);
         setCurrentPage(1);
-        setFilterName("");
+        setFilterWeight("");
     };
 
     return(
 <div>
       {currentDogs.length === 0 ? (<div style={{ marginTop: "20%", marginLeft: "50%" }} className={styles.loader}> </div>) :
         (<div className={styles.homeContainer} >
-          <h1 className={styles.margin}></h1>
-          <div className={styles.navBar}>
-            <div className={styles.filters}>
+           <h1 className={styles.margin}></h1>
+            <div className={styles.navBar}>
+             <div className={styles.filters}>
               <div>
                 <div>
                   <div>
@@ -112,6 +115,7 @@ const Home = () =>{
 
                     <span> Sort by name </span>
                     <select className={styles.input} value={filterName} onChange={(event) => handleSortName(event)}>
+                      <option value="normal"> ----- </option>
                       <option value="az"> A - Z </option>
                       <option value="za"> Z - A </option>
                     </select>

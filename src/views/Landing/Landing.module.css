@@ -6,10 +6,10 @@
     color: #98f0f3;
 }
   
-  
+
   .showcase{
     color: #2b5f68;
-    background-image:url('https://img.freepik.com/free-vector/animal-background-vector-with-cute-pets-illustration_53876-127698.jpg?w=2000');
+    background-image:url('https://img.freepik.com/vector-premium/coleccion-lindos-perros-divertidos-conjunto-diferentes-mascotas-dibujos-animados-aisladas-sobre-fondo-blanco-perro-estampado-animal-creativo-postales-ropa-guarderia-ilustracion-vector-dibujado-mano-colorido_479163-905.jpg?size=626&ext=jpg&uid=R103772969&ga=GA1.2.879167785.1684450201&semt=sph');
     background-size:cover;
     background-position:center;
     height:100vh;
@@ -31,12 +31,12 @@
   }
   
  .showcase .button{
-    font-size:18px;
+    font-size:20px;
     text-decoration:none;
-    color:#2b5f68;
-    border:#2b5f68 1px solid;
+    color:#cdd8da;
+    border:#dee9eb 4px solid;
     padding:10px 20px;
-    border-radius:10px;
+    border-radius:20px;
     margin-top:20px;
   }
   

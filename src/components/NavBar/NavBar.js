@@ -9,7 +9,7 @@ const NavBar = ()=>{
 
 	return (
         <div className={styles.container}>
-			 <img src="/favicon.png" alt="img" />
+			 
             <ul>
                 <Link to="/home">
                     <li>Home</li>

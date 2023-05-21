@@ -58,6 +58,12 @@ export default function reducer(state = initialState, action) {
           dogs: filterDogs,
         };
         case FILTER_BY_NAME:
+            const allDogsByName = [...state.dogs];
+            if (action.payload === "any" || action.payload === "default") {
+				return {
+					...state,
+					dogs: allDogsByName,
+				}}
         const filterByName =
         action.payload === "az"
             ? state.dogs.sort((a, b) => {
