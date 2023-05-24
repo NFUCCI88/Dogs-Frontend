@@ -1,16 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./DogCard.module.css";
 
 const DogCard = (props) =>{
-    const {img, name, heightMin, heigthMax, weightMin, weightMax, life_span, temperament} = props;
+    const {img, name, heightMin, heigthMax, weightMin, weightMax, life_span, temperament} = props;//Desestructuramos la propiedades del perro 
 
  
-
- 
-
-console.log(typeof(weightAvg))
-
     return(
         <div className={styles.background}>
             <div className={styles.container}>
@@ -20,10 +15,10 @@ console.log(typeof(weightAvg))
                             <h1 className= {styles.tittle}>Dog Details</h1>
                             <div className="detail">
                                 <h3>{name}</h3>
-                                <h5>Height : {heightMin} - {heigthMax} cm </h5>
+                                <h5>Height : {heightMin} - {heigthMax} cm </h5> 
                                 <h5>Weight : {weightMin} - {weightMax} kg </h5>
                                 <h5>Life Span : {life_span}</h5>
-                                <h6>Temperaments : {temperament}</h6>
+                                <h6>Temperaments : {temperament} </h6>
                                 <Link className={styles.button7} to ="/home">HOME</Link>
                             </div>
                         </div>

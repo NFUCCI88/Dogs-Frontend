@@ -1,13 +1,9 @@
 import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
 
-
-
-
 const NavBar = ()=>{
     
-
-	return (
+	return (//retornamos una NavBar con Home, create y exit
         <div className={styles.container}>
 			 
             <ul>

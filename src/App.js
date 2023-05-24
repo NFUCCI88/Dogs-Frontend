@@ -2,11 +2,10 @@ import {Route} from "react-router-dom";
 import Landing from "./views/Landing/Landing";
 import Home from "./views/Home/Home";
 import Create from "./views/Create/Create";
-import Update from "./views/Update/Update";
 import Detail from "./views/Detail/Detail";
 import NavBar from "./components/NavBar/NavBar";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
-//Hacer un index en views para importar todo junto
+
 
 function App() {
 
@@ -27,11 +26,6 @@ function App() {
       <Route path = "/detail/:id">
         <Detail></Detail>
       </Route>
-      <Route path = "/update/:id">
-         <Update></Update>
-      </Route>
-    
-      
 
     </div>
   );

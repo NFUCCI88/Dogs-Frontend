@@ -1,11 +1,11 @@
 import {React, useState, useEffect} from "react";
-import { useDispatch,useSelector } from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {Link, useHistory} from "react-router-dom";
 import {getTemperaments, createDog} from "../../redux/actions";
 import styles from "./Create.module.css";
 
 
-const validate = (input) => {
+const validate = (input) => {//hacemos todas las validaciones
     let errors = {};
     let twoSpaceExpression = /\s{2,}/g;
     let expression = /^[a-zA-Z ]+$/gm;
@@ -73,9 +73,9 @@ const validate = (input) => {
  
     const dispatch = useDispatch();
     const history = useHistory();
-    const temperaments = useSelector((state) => state.temperaments);
-    const [errors, setErrors] = useState("");
-    const [input, setInput] = useState({
+    const temperaments = useSelector((state) => state.temperaments);//quedamos atentos al cambio del estado global
+    const [errors, setErrors] = useState("");//manejamos los errores con estados locales
+    const [input, setInput] = useState({//manejamos los inputs con estados locales y definimos las props, todos arrancando vacias
         name: "",
         life_span: "",
         img: "",
@@ -87,27 +87,27 @@ const validate = (input) => {
     });
 
     useEffect(()=>{
-        dispatch(getTemperaments());
+        dispatch(getTemperaments());//al montare que se despache la accion que trae todos los temperamentos
     },[dispatch]);
 
-    const handleChange = (event) => {
+    const handleChange = (event) => {//ante un cambio que se actualice el estado del input, devolviendo una copia del estado original
         setInput({
             ...input,
             [event.target.name] : event.target.value,
         })
-        setErrors(validate({
+        setErrors(validate({//actualizamos los errores con las validaciones
             ...input,
             [event.target.name] : event.target.value,
         }));
     };
 
     const handleSelect = (event)=>{
-        if(input.temperament.find((temp) => temp.id === event.target.value.split(",")[0])){
-            console.log({input});
+        if(input.temperament.find((temp) => temp.id === event.target.value.split(",")[0])){//buscamos los temperamentos por id
+            console.log({input});//al seleccionar el temperamento, si ya se encuentra en la lista, arroja un alert
             alert("Already in the list");
         } else {
             setInput({
-                ...input,
+                ...input,//caso contrario, sumamos el temperamento al perro
                 temperament: [...input.temperament,
                 {id: event.target.value.split(",")[0],
                 name: event.target.value.split(",")[1]}]
@@ -115,14 +115,14 @@ const validate = (input) => {
         }
     };
 
-    const handleDelete = (event) => {
+    const handleDelete = (e) => {
         setInput({
             ...input,
-            temperament: input.temperament.filter((elem)=> elem !== event),
+            temperament: input.temperament.filter((elem)=> elem !== e),//eliminamos el temperamento
         });
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event) => {//si tenemos todos los inputs validades y completos, retornamos el perro creado enviandolo al Home
         if(input.name && 
         !parseInt(input.name) &&
         input.life_span && 
@@ -162,7 +162,6 @@ const validate = (input) => {
         }
     };
 
-    console.log(typeof(input.weightMin))
 
     return(
         <div className={styles.background}>
@@ -277,7 +276,7 @@ const validate = (input) => {
             <div>
                 <select className={input.temperament.length >= 6 ? styles.notInput : styles.input} onChange={(event) => handleSelect(event)}>
                     {temperaments?.map((elem, i)=>(
-                        <option value={`${elem.id},${elem.name}`} key={i}> {elem.name}</option>
+                        <option value={`${elem.id}, ${elem.name}`} key={i}> {elem.name} </option>
                     ))}
                 </select>
                 <div>

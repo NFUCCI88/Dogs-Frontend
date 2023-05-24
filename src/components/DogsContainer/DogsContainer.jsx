@@ -4,13 +4,9 @@ import styles from "./DogsContainer.module.css";
 
 
 const DogsContainer = (props) =>{
-    const {id, name, temperament, weightMin, weightMax, img} = props
+    const {id, name, temperament, weightMin, weightMax, img} = props //desestructuramos las props
 
-
-
-    console.log(typeof(weightAvg))
-
-    return(
+    return(//retornamos nombre, temperamentos y el valor del peso minimo y maximo
         <div className={styles.card} style={{ textAlign: "center"}} key = {id}>
             <Link to={`/detail/${id}`} style={{textDecoration: "none", color: "#001213"}}>
                 <div className={styles.cardImage}>
